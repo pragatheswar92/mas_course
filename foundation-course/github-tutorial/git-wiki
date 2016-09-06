@@ -1,0 +1,147 @@
+praggy@praggy-Aspire-4736Z:~/fc_documents/mas_course$ git remote -v
+origin	https://github.com/pragatheswar92/mas_course.git (fetch)
+origin	https://github.com/pragatheswar92/mas_course.git (push)
+praggy@praggy-Aspire-4736Z:~/fc_documents/mas_course$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+nothing to commit, working directory clean
+praggy@praggy-Aspire-4736Z:~/fc_documents/mas_course$ nano README.md 
+praggy@praggy-Aspire-4736Z:~/fc_documents/mas_course$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+praggy@praggy-Aspire-4736Z:~/fc_documents/mas_course$ git diff README.md
+diff --git a/README.md b/README.md
+index e5a88c1..e2712d3 100644
+--- a/README.md
++++ b/README.md
+@@ -1,2 +1,2 @@
+ # mas_course
+-test repository for foundation course
++test repository for foundation course. created to store documents of MAS
+praggy@praggy-Aspire-4736Z:~/fc_documents/mas_course$ git add README.md 
+praggy@praggy-Aspire-4736Z:~/fc_documents/mas_course$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   README.md
+
+praggy@praggy-Aspire-4736Z:~/fc_documents/mas_course$ git commit
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'praggy@praggy-Aspire-4736Z.(none)')
+praggy@praggy-Aspire-4736Z:~/fc_documents/mas_course$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   README.md
+
+praggy@praggy-Aspire-4736Z:~/fc_documents/mas_course$ git commit -m "refactor the description of the repository"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'praggy@praggy-Aspire-4736Z.(none)')
+praggy@praggy-Aspire-4736Z:~/fc_documents/mas_course$  git config --global user.email "nagarajanpragatheswar@example.com"
+praggy@praggy-Aspire-4736Z:~/fc_documents/mas_course$ git config --global user.name "pragatheswar92"
+praggy@praggy-Aspire-4736Z:~/fc_documents/mas_course$ git commit
+[master 594417e] refactor the description of the repository
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+praggy@praggy-Aspire-4736Z:~/fc_documents/mas_course$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working directory clean
+praggy@praggy-Aspire-4736Z:~/fc_documents/mas_course$ git branch
+* master
+praggy@praggy-Aspire-4736Z:~/fc_documents/mas_course$ git remote -v
+origin	https://github.com/pragatheswar92/mas_course.git (fetch)
+origin	https://github.com/pragatheswar92/mas_course.git (push)
+praggy@praggy-Aspire-4736Z:~/fc_documents/mas_course$ git push origin master 
+Username for 'https://github.com': pragatheswar92
+Password for 'https://pragatheswar92@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/pragatheswar92/mas_course.git/'
+praggy@praggy-Aspire-4736Z:~/fc_documents/mas_course$ git push origin master 
+Username for 'https://github.com': pragatheswar92
+Password for 'https://pragatheswar92@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/pragatheswar92/mas_course.git/'
+praggy@praggy-Aspire-4736Z:~/fc_documents/mas_course$ git push origin master 
+Username for 'https://github.com': pragatheswar92
+Password for 'https://pragatheswar92@github.com': 
+Counting objects: 5, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 345 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/pragatheswar92/mas_course.git
+   965478f..594417e  master -> master
+praggy@praggy-Aspire-4736Z:~/fc_documents/mas_course$ git remote -v
+origin	https://github.com/pragatheswar92/mas_course.git (fetch)
+origin	https://github.com/pragatheswar92/mas_course.git (push)
+praggy@praggy-Aspire-4736Z:~/fc_documents/mas_course$ git remote add git@github.com:pragatheswar92/mas_course.git
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=<push|fetch>]
+                          set up remote as a mirror to push to or fetch from
+
+praggy@praggy-Aspire-4736Z:~/fc_documents/mas_course$ git remote -v
+origin	https://github.com/pragatheswar92/mas_course.git (fetch)
+origin	https://github.com/pragatheswar92/mas_course.git (push)
+praggy@praggy-Aspire-4736Z:~/fc_documents/mas_course$ git remote add origin_ssh git@github.com:pragatheswar92/mas_course.git
+praggy@praggy-Aspire-4736Z:~/fc_documents/mas_course$ git remote -v
+origin	https://github.com/pragatheswar92/mas_course.git (fetch)
+origin	https://github.com/pragatheswar92/mas_course.git (push)
+origin_ssh	git@github.com:pragatheswar92/mas_course.git (fetch)
+origin_ssh	git@github.com:pragatheswar92/mas_course.git (push)
+praggy@praggy-Aspire-4736Z:~/fc_documents/mas_course$ git remote remove origin
+praggy@praggy-Aspire-4736Z:~/fc_documents/mas_course$ git remote -v
+origin_ssh	git@github.com:pragatheswar92/mas_course.git (fetch)
+origin_ssh	git@github.com:pragatheswar92/mas_course.git (push)
+praggy@praggy-Aspire-4736Z:~/fc_documents/mas_course$ mmkdir foundation-course
+No command 'mmkdir' found, did you mean:
+ Command 'mkdir' from package 'coreutils' (main)
+ Command 'hmkdir' from package 'hfsutils' (main)
+ Command 'mmdir' from package 'simh' (universe)
+mmkdir: command not found
+praggy@praggy-Aspire-4736Z:~/fc_documents/mas_course$ mkdir foundation-course
+praggy@praggy-Aspire-4736Z:~/fc_documents/mas_course$ mkdir github-tutorial
+
